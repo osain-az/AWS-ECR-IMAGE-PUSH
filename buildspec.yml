@@ -3,7 +3,7 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      nodejs: 12
+      nodejs: 16
     commands:
       - echo Installing Mocha...
   pre_build:
@@ -21,7 +21,6 @@ phases:
       - echo Build docker image start
       - docker build -t dev .
       - docker tag dev:latest 885102517186.dkr.ecr.eu-central-1.amazonaws.com/dev:latest
-
   post_build:
     commands:
       - echo pushing
