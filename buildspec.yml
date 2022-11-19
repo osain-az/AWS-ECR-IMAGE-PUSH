@@ -17,9 +17,9 @@ phases:
       - echo Compiling the Node.js code
       - echo Build completed on `date`
       #authenticate aws ECR
-      - eho authenticate ECR
+      - echo authenticate ECR
       - aws ecr get-login-password --region eu-central-1 | docker login --username AWS --password-stdin 885102517186.dkr.ecr.eu-central-1.amazonaws.com
-      - eho Build docker image start
+      - echo Build docker image start
       - docker build -t dev .
       - docker tag dev:latest 885102517186.dkr.ecr.eu-central-1.amazonaws.com/dev:latest
 
