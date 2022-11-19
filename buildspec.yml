@@ -15,10 +15,14 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Compiling the Node.js code
+      - echo Build completed on `date`
+      #authenticate aws ECR
+      - eho authenticate ECR
+      - aws ecr get-login-password --region eu-central-1 | docker login --username AWS --password-stdin 885102517186.dkr.ecr.eu-central-1.amazonaws.com
+      - docker build -t dev .
+      - docker tag dev:latest 885102517186.dkr.ecr.eu-central-1.amazonaws.com/dev:latest
+
   post_build:
     commands:
-      - echo Build completed on `date`
-# Include only the files required for your application to run.
-# Do not use recursively include artifacts from node_modules directory as it will include unnecessary packages
-# used only for building and testing.
-# ExpressJS apps will need other artifact directories included (bin/*, public/*, routes/*, views/* etc).
+      - echo pushing
+      - docker push 885102517186.dkr.ecr.eu-central-1.amazonaws.com/dev:latest
