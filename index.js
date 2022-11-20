@@ -3,7 +3,7 @@ const express = require("express");
 const app = express();
 
 app.get("/", (req, res) => {
-  res.send("Welcome to express app world with CICD using github actions. this is the final stage ");
+  res.send("Welcome to express app world with CICD using github actions. this is the final stage  update");
 });
 
 app.get("/me", (req, res) => {
