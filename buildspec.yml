@@ -1,8 +1,7 @@
 version: 0.2
-
 env:
 variables:
-REACT_APP_SOME_SPACE: ${SOME_SPACE}
+REACT_APP_SOME_SPACE: ${CODE_TEST}
 
 phases:
   install:
@@ -10,7 +9,7 @@ phases:
       nodejs: 16
     commands:
       - echo Installing Mocha...
-      - echo code_test-env $CODE_TEST
+      - echo code_test-env $REACT_APP_SOME_SPACE
   pre_build:
     commands:
       - echo Installing source NPM dependencies....
