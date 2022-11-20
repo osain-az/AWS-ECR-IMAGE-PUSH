@@ -2,7 +2,6 @@ version: 0.2
 env:
  parameter-store:
   REACT_APP_SOME_SPACE: CODE_TEST
-
 phases:
   install:
     runtime-versions:
