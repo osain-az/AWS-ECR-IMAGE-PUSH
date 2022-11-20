@@ -1,11 +1,16 @@
 version: 0.2
 
+env:
+variables:
+REACT_APP_SOME_SPACE: ${SOME_SPACE}
+
 phases:
   install:
     runtime-versions:
       nodejs: 16
     commands:
       - echo Installing Mocha...
+      - echo code_test-env $CODE_TEST
   pre_build:
     commands:
       - echo Installing source NPM dependencies....
