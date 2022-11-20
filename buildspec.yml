@@ -28,8 +28,7 @@ phases:
     commands:
       - echo pushing
       - docker push 885102517186.dkr.ecr.eu-central-1.amazonaws.com/dev:latest
-       #create image definition
       - printf '[{"name":"dev","imageUri":"885102517186.dkr.ecr.eu-central-1.amazonaws.com/dev:latest"}]' > imagedefinitions.json
-  artifacts:
+artifacts:
    files:
     - imagedefinitions.json
