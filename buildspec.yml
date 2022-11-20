@@ -28,7 +28,7 @@ phases:
     commands:
       - echo pushing
       - docker push 885102517186.dkr.ecr.eu-central-1.amazonaws.com/dev:latest
-      - printf '[{"name":"new-cicd","imageUri":"885102517186.dkr.ecr.eu-central-1.amazonaws.com/dev:latest"}]' > imagedefinitions.json
+      - printf '[{"name":"newcicd","imageUri":"885102517186.dkr.ecr.eu-central-1.amazonaws.com/dev:latest"}]' > imagedefinitions.json
 artifacts:
    files:
     - imagedefinitions.json
