@@ -2,7 +2,6 @@ version: 0.2
 env:
 variables:
 REACT_APP_SOME_SPACE:  /CodeBuild/CODE_TEST
-REACT_APP_SOME_SPACE1: '${CODE_TEST}' 
 
 phases:
   install:
